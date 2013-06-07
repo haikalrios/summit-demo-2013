@@ -47,16 +47,6 @@ public class Admin extends Composite {
     complaints.setItems(query.getResultList());
   }
 
-  @SuppressWarnings("unused")
-  private void complaintChanged(@Observes UserComplaint created) {
-    LogUtil.log("Got complaint from server:" + created);
-    try {
-      mergeInLocalStorage(created);
-      loadComplaints();
-    } catch (Throwable t) {
-      LogUtil.log(t.getMessage());
-    }
-  }
 
   @AfterInitialization
   private void sync() {
