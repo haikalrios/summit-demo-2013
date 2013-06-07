@@ -42,7 +42,7 @@ public class App {
   
   @AfterInitialization
   private void afterInit() {
-    Admin.init = true;
+    // Admin.init = true;
   }
   
   public void sync() {
